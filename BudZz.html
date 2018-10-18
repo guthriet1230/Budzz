@@ -13,6 +13,14 @@
     <link rel="shortcut icon" type="image/png" href="./assets/img/megaman.ico">
     <script src=“https://www.gstatic.com/firebasejs/5.5.4/firebase.js“></script>
     <title>BudZz</title>
+
+<style>
+    .breweries-go-here {
+        color: red;
+    }
+
+</style>
+
 </head>
 
 <body>
@@ -72,25 +80,9 @@
     <footer>&copy; Copyright BudZz 2018</footer>
     </footer>
 
-    <script>
-        $(document).ready();
+    
 
-        var beer = [];
-        
-        $("#add-topic").on("click", function(event) {
-            event.preventDefault();
-            var beer = $("#topic-input").val().trim();
-            beer.push(topic);
-            console.log(beer)
-
-        }
-
-
-
-
-    </script>    
-
-
+    <script src="test.js"></script>
 
 
 </body>
