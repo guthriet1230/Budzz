@@ -1,0 +1,51 @@
+body {
+    background: grey;
+}
+
+header {
+    background: skyblue;
+    background-size: cover;
+    padding: 10px 0px;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 5em;
+}
+
+navbar {
+    height: 10px;
+    width: 100%;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: white;
+}
+
+h1 {
+    margin: 200px 0px 200px 0px;
+    text-align: center;
+    color: white;
+}
+
+p {
+    height: 50%;
+    width: 50%;
+    text-align: center;
+    color: white;
+    margin: -100px 0px 30px 360px;
+
+}
+
+form {
+    margin: 0px 0px 50px 560px;
+}
+
+footer {
+    background: skyblue;
+    background-size: cover;
+    padding: 20px 0px;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 200px 0px 0px 0px;
+    color: white;
+}
+img {
+    size;
+}
