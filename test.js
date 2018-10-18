@@ -28,12 +28,13 @@ function getDrinks(drink) {
 
     for (i = 0; i < results.length; i++) {
       var name = results[i].strDrink;
+      //var in
       console.log(name);
       var drinkDiv = $("<div>");
 
-      var p = $("<p>").text("Drinks" + name);
+      var p = $("<li>").text(name);
       drinkDiv.append(p);
-      $(".breweries-go-here").append(drinkDiv);
+      $("#drink-list").prepend(drinkDiv);
     }
 
   });
@@ -48,11 +49,9 @@ $("#add-topic").on("click", function () {
   event.preventDefault();
 
   var drink = $("#topic-input").val().trim();
+  $("#topic-input").val("");
 
   getDrinks(drink);
-
-
-
 
 
 })

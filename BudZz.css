@@ -28,7 +28,7 @@ p {
     height: 50%;
     width: 50%;
     text-align: center;
-    color: white;
+    color: red;
     margin: -100px 0px 30px 360px;
 
 }
@@ -48,4 +48,9 @@ footer {
 }
 img {
     size;
+}
+
+ {
+    color: red;
+    margin: auto;
 }

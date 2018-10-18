@@ -11,11 +11,10 @@
         crossorigin='anonymous'></script>
     <link rel="stylesheet" type="text/css" href="BudZz.css">
     <link rel="shortcut icon" type="image/png" href="./assets/img/megaman.ico">
-    <script src=“https://www.gstatic.com/firebasejs/5.5.4/firebase.js“></script>
-    <title>BudZz</title>
+    <script src=“https://www.gstatic.com/firebasejs/5.5.4/firebase.js“> </script> <title>BudZz</title>
 
 <style>
-    .breweries-go-here {
+    .drink-list {
         color: red;
     }
 
@@ -51,10 +50,10 @@
     </nav>
     <div>
         <h1><strong>Find your beer selection here</strong></h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
              Harum quo iste magni repellat fugit placeat dicta
             fuga veniam enim saepe ipsum blanditiis, sint reprehenderit expedita? Aspernatur deleniti nulla delectus
-            ea?</p>
+            ea?</p> -->
     </div>
     <br>
     <form id="topic-form">
@@ -63,13 +62,20 @@
         <input type="text" id="topic-input">
 
         <!-- Button triggers new movie to be added -->
-        <input id="add-topic" type="submit" value="Select Location">
+        <input id="add-topic" type="submit" value="Choose a Drink!">
 
     </form>
 
     <br>
 
-    <div class="breweries-go-here">
+    <div class="container">
+    <div class="row">
+        <div id="drink-list" class="col-md-12">
+
+        </div>
+    </div>
+</div>
+    <!-- <div class="drink-list"> -->
 
 
     </div>
@@ -85,6 +91,6 @@
     <script src="test.js"></script>
 
 
-</body>
+    </body>
 
 </html>
