@@ -50,7 +50,7 @@ function getDrinks(drink) {
 
 }
 
-$("#add-topic").on("click", function () {
+$("#add-topic").on("click", function (event) {
   event.preventDefault();
   console.log("i clicked this buton");
   
