@@ -4,12 +4,14 @@ var map;
 var infowindow;
 
 function initMap(beverage) {
+    console.log("init map");
     var pyrmont = { lat: 41.881832, lng: -87.623177 };
 
     map = new google.maps.Map(document.getElementById('map'), {
         center: pyrmont,
         zoom: 15
     });
+    console.log(map)
 
     infowindow = new google.maps.InfoWindow();
     var service = new google.maps.places.PlacesService(map);
@@ -22,8 +24,11 @@ function initMap(beverage) {
 }
 
 function callback(results, status) {
+    console.log("CALLBACK")
     if (status === google.maps.places.PlacesServiceStatus.OK) {
+        console.log("Callback Status OK")
         for (var i = 0; i < results.length; i++) {
+            console.log("Creating Marker")
             createMarker(results[i]);
         }
     }

@@ -111,6 +111,14 @@ GOOGLE SIGN IN
 #google-signin p{
     font-size:15px;
     color: pink;
+} 
+/* .map {
+    position: center;
+    margin: 10px 0px 0px 680px;
+} */
+
+#map {
+    height: 500px;
 }
 
 
