@@ -23,7 +23,7 @@ function initMap(beverage) {
         location: pyrmont,
         radius: 5000,
         //type: ['store']
-        keyword: 'tequila',
+        keyword: beverage,
     }, callback);
 }
 
