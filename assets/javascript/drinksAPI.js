@@ -54,6 +54,7 @@ $("#add-topic").on("click", function (event) {
   event.preventDefault();
   console.log("i clicked this buton");
   
+  
 
   var drink = $("#topic-input").val().trim();
 

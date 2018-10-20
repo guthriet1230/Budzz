@@ -1,6 +1,8 @@
+// Initialize Firebase
+console.log("hello");
 
-
-  // Initialize Firebase
+$(document).ready(function(){
+  
   var config = {
     apiKey: "AIzaSyDNO-ehgQSWvmRHrWcfLcmkOOUr9IaQ83U",
     authDomain: "budzz-b509d.firebaseapp.com",
@@ -9,11 +11,12 @@
     storageBucket: "budzz-b509d.appspot.com",
     messagingSenderId: "114148428551"
   };
+
   firebase.initializeApp(config);
 
-  var database = firebase.database();
+  // var database = firebase.database();
 
-console.log("hello")
+
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 // GOOGLE SIGN IN FUNCTIONS
 ////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -70,29 +73,30 @@ firebase.auth().signInWithPopup(provider).then(function(result) {
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 //SIGNING OUT
 ////////////////////////////////////////////////////////////////////////////////////////////////////
-$("#signout-button").on("click", function(){
-firebase
-  .auth()
-  .signOut()
-  .then(function() {
-    // Sign-out successful.
-  })
-  .catch(function(error) {
-    // An error happened.
-  });
+// $("#signout-button").on("click", function(){
+// firebase
+//   .auth()
+//   .signOut()
+//   .then(function() {
+//     // Sign-out successful.
+//   })
+//   .catch(function(error) {
+//     // An error happened.
+//   });
+// })
+
+
+// ////////////////////////////////////////////////////////////////////////////////////////////////////
+// //REALTIME DATABASE
+// ////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+// database.ref("/bars").on("child_added", function(snapshot) {
+
+// });
+
+
+// database.ref("/drinks").on("child_added", function(snapshot) {
+
+// });
 })
-
-
-////////////////////////////////////////////////////////////////////////////////////////////////////
-//REALTIME DATABASE
-////////////////////////////////////////////////////////////////////////////////////////////////////
-
-
-database.ref("/bars").on("child_added", function(snapshot) {
-
-});
-
-
-database.ref("/drinks").on("child_added", function(snapshot) {
-
-});
