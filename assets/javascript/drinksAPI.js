@@ -1,8 +1,5 @@
 console.log("this is test.js");
 
-
-
-
 //var token = '1'
 var cocktail_search_url = 'https://www.thecocktaildb.com/api/json/v1/1/search.php?'
 function clientCallback() {
