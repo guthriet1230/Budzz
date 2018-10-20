@@ -20,6 +20,24 @@
 
 </style>
 
+<style>
+        /* Always set the map height explicitly to define the size of the div
+           * element that contains the map. */
+            #map {
+                height: 500px;
+            }
+    
+            /* Optional: Makes the sample page fill the window. */
+            html,
+            body {
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+        </style>
+
+        
+
 </head>
 
 <body>
@@ -69,13 +87,25 @@
     <br>
 
     <div class="container">
-    <div class="row">
-        <div id="drink-list" class="col-md-12">
+        <div class="row">
+            <div id="drink-list" class="col-md-12">
 
+
+            </div>
         </div>
     </div>
-</div>
-    <!-- <div class="drink-list"> -->
+
+    <div class="container">
+            <div class="row">
+                <div id="map" class="col-md-12">
+                    <h1>test header</h1>
+                    <!-- <div id="map"></div> -->
+                    <!-- <div id="places"></div>
+                    <div id="demo"></div> -->
+                </div>
+            </div>
+        </div>
+    
 
 
     </div>
@@ -83,14 +113,17 @@
 
 
 
-    <footer>&copy; Copyright BudZz 2018</footer>
-    </footer>
+    
 
     
 
     <script src="test.js"></script>
-
+    <script src="testjavascript.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBxMi-JFZ7rEdxN-SIT-94Z69OpS6PpSOw&libraries=places&callback=initMap" async defer></script>
 
     </body>
+
+    <footer>&copy; Copyright BudZz 2018</footer>
+    
 
 </html>

@@ -1,3 +1,8 @@
+console.log("this is test.js");
+
+
+
+
 //var token = '1'
 var cocktail_search_url = 'https://www.thecocktaildb.com/api/json/v1/1/search.php?'
 function clientCallback() {
@@ -47,11 +52,15 @@ function getDrinks(drink) {
 
 $("#add-topic").on("click", function () {
   event.preventDefault();
+  console.log("i clicked this buton");
+  
 
   var drink = $("#topic-input").val().trim();
+
   $("#topic-input").val("");
 
   getDrinks(drink);
+  initMap(drink);
 
 
 })
