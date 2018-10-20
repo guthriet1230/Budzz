@@ -2,7 +2,8 @@ console.log("test");
 
 var map;
 var infowindow;
-
+var beverage = $("#topic-input").val().trim();
+console.log('pre',beverage)
 function initMap(beverage) {
     console.log("init map");
     var pyrmont = { lat: 41.881832, lng: -87.623177 };
@@ -14,10 +15,13 @@ function initMap(beverage) {
     console.log(map)
 
     infowindow = new google.maps.InfoWindow();
+    // console.log(google.maps.places.PlacesService);
+    console.log("THIS IS THE STRING" + google.maps.places);
     var service = new google.maps.places.PlacesService(map);
+    console.log('post',beverage);
     service.nearbySearch({
         location: pyrmont,
-        radius: 500,
+        radius: 5000,
         //type: ['store']
         keyword: beverage,
     }, callback);
