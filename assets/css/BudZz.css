@@ -1,168 +1,151 @@
 /* BudZz.css */
 
 body {
-    background: url("../img/beer_background.jpg") no-repeat center fixed;
-    background-size: cover;
-    
+  background: url("../img/beer_background.jpg") no-repeat center fixed;
+  background-size: cover;
 }
-
-/* #bars{
-    background: white;
-    height: 300px;
-    width: 300px;
-    margin: 400px 0px 0px 285px;
- 
-}
-#drinks {
-    background: white;
-    height: 300px;
-    width: 300px;
-    margin: 60px 0px 0px 285px; 
-  ;
-} */
 
 /* ------------------------------------------
 HEADER 
 ------------------------------------------ */
 header {
-    background: black;
-    background-size: cover;
-    padding: 0px 0px 20px 0px;
-    text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 3em;
-    color: white;
-    position: relative;
+  background: black;
+  background-size: cover;
+  padding: 0px 0px 20px 0px;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 3em;
+  color: white;
+  position: relative;
 }
 
-#current-user{
-    font-size:15px;
+#current-user {
+  font-size: 15px;
 }
 
 /*------------------------------------------
 GOOGLE SIGN IN 
 -------------------------------------------*/
 #google-signin {
-    /* margin-top: 50px;
-    margin-right: 40px; */
-    /* position: right;
-    top:5px;
-    right:100px; */
-    text-align:center;
+  text-align: center;
 }
 
 #google-signin p {
-   font-size:15px;
-   color: white;
-   text-decoration:underline;
-   
-} 
+  font-size: 15px;
+  color: white;
+  text-decoration: underline;
+  padding: 0;
+  margin: 0;
+}
 #google-details {
-   color: white;
-   /* height: 50px;
-   width: 50px; */
+  color: white;
 }
 
 #profile-img img {
-width:50px;
-border-radius:50%;
+  width: 50px;
+  border-radius: 50%;
+}
+
+/* ------------------------------------------
+DRINK LIST
+------------------------------------------ */
+
+h2 {
+  font-size: 40px;
+}
+
+#drinks {
+  background: rgb(210, 180, 140, 0.6);
+  border: 1px grey solid;
+  color: black;
+  min-height: 310px;
+  padding-bottom: 10px;
+}
+
+#drinks p {
+  color: white;
+}
+
+#drinks img {
+  width: 100%;
+}
+
+hr {
+  color: white;
+  width: 90%;
+  border: white 1px solid;
+}
+
+#bars-header,
+#drinks-header {
+  text-align: center;
+  font-size: 40px;
+  padding-top: 15px;
+}
+
+li {
+  color: black;
 }
 
 /* ------------------------------------------
 DRINK SEARCH 
 ------------------------------------------ */
-#drinks-row{
-    margin-top:50px;
+#drinks-row {
+  margin-top: 50px;
 }
 
-#drinks-input{
-    padding:20px;
-    text-align:center;
-   
-
+#drinks-input {
+  padding: 20px;
+  text-align: center;
+  background: rgb(210, 180, 140, 0.6);
+  border: 1px grey solid;
+  min-height: 310px;
+  color: black;
 }
 
-
-
-/* h1 {
-    margin: -800px 0px 100px 560px;
-    text-align: center;
-    color: #fcf0c8;
-} */
+form #search-field {
+  height: 35px;
+}
 
 #para1 {
-    /* height: 50%;
-    width: 50%;
-    text-align: center;
-    color:white;
-    margin: 40px 0px 60px 630px; */
-color:white;
+  color: white;
 }
 
-form {
-    /* margin: 0px 0px 50px 830px; */
+#add-topic {
+  border-radius: 5px;
 }
 
-/* ------------------------------------------
-LISTS 
------------------------------------------- */
-
-#bars, #drinks{
-background: rgb(128, 128, 128, .9);
-border-radius:5px;
-color:white;
+.error {
+  color: red;
+  margin: auto auto;
 }
-hr{
-    color:white;
-    width:90%;
-    border: white 1px solid;
-}
-
-#bars-header, #drinks-header {
-    text-align:center;
-    font-size:20px;
-    padding-top:15px;
-    /* margin: 40px 0px 20px auto; */
-} 
-
-li {
-    color: white;
-
-}
-    
-
 
 /* ------------------------------------------
 MAP 
 ------------------------------------------ */
 .map {
-    position: center;
-    margin: 10px 0px 0px 0px;
-}
-/* ------------------------------------------
-FOOTER 
------------------------------------------- */
-footer {
-    background: black;
-    background-size: cover;
-    padding: 30px 0px;
-    text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
-    margin: 240px 0px 0px 0px;
-    color: #fcf0c8;
+  position: center;
+  margin: 10px 0px 0px 0px;
 }
 
 /*---------------------------------------------
  Maps positioning
  ---------------------------------------------*/
-/* .map {
-    position: center;
-    margin: 10px 0px 0px 680px;
-} */
 
 #map {
-    height: 500px;
-    margin-top:20px;
+  height: 500px;
+  margin-top: 20px;
 }
 
-
+/* ------------------------------------------
+FOOTER 
+------------------------------------------ */
+footer {
+  background: black;
+  background-size: cover;
+  padding: 30px 0px;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 120px 0px 0px 0px;
+  color: #fcf0c8;
+}
