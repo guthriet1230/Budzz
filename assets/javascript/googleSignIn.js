@@ -1,8 +1,8 @@
 // Initialize Firebase
-console.log("hello");
+// console.log("hello");
 
-$(document).ready(function(){
-  
+$(document).ready(function () {
+
   var config = {
     apiKey: "AIzaSyDNO-ehgQSWvmRHrWcfLcmkOOUr9IaQ83U",
     authDomain: "budzz-b509d.firebaseapp.com",
@@ -17,16 +17,16 @@ $(document).ready(function(){
   // var database = firebase.database();
 
 
-////////////////////////////////////////////////////////////////////////////////////////////////////
-// GOOGLE SIGN IN FUNCTIONS
-////////////////////////////////////////////////////////////////////////////////////////////////////
+  ////////////////////////////////////////////////////////////////////////////////////////////////////
+  // GOOGLE SIGN IN FUNCTIONS
+  ////////////////////////////////////////////////////////////////////////////////////////////////////
 
-// console.log(firebase);
-var provider = new firebase.auth.GoogleAuthProvider();
+  // console.log(firebase);
+  var provider = new firebase.auth.GoogleAuthProvider();
 
-provider.addScope("https://www.googleapis.com/auth/contacts.readonly");
+  provider.addScope("https://www.googleapis.com/auth/contacts.readonly");
 
-firebase.auth().signInWithPopup(provider).then(function(result) {
+  firebase.auth().signInWithPopup(provider).then(function (result) {
     // This gives you a Google Access Token. You can use it to access the Google API.
     var token = result.credential.accessToken;
     // The signed-in user info.
@@ -36,9 +36,9 @@ firebase.auth().signInWithPopup(provider).then(function(result) {
     // ADD PROFILE NAME
     ////////////////////////////////////////////////////////////////////////////////////////////////////
 
-    console.log(result);
-    console.log(result.user.displayName);
-    console.log(user.email);
+    // console.log(result);
+    // console.log(result.user.displayName);
+    // console.log(user.email);
 
     $("#current-user").text(result.user.displayName);
 
@@ -57,16 +57,16 @@ firebase.auth().signInWithPopup(provider).then(function(result) {
     // Errors
     ////////////////////////////////////////////////////////////////////////////////////////////////////
   })
-  .catch(function(error) {
-    // Handle Errors here.
-    var errorCode = error.code;
-    var errorMessage = error.message;
-    // The email of the user's account used.
-    var email = error.email;
-    // The firebase.auth.AuthCredential type that was used.
-    var credential = error.credential;
+    .catch(function (error) {
+      // Handle Errors here.
+      var errorCode = error.code;
+      var errorMessage = error.message;
+      // The email of the user's account used.
+      var email = error.email;
+      // The firebase.auth.AuthCredential type that was used.
+      var credential = error.credential;
 
-    // console.log(error);
-    // ...
-  });
+      // console.log(error);
+      // ...
+    });
 })

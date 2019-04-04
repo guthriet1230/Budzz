@@ -7,16 +7,16 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
     <!--------------------------------- JQUERY -------------------------------->
-    <script src='https://code.jquery.com/jquery-3.3.1.min.js' integrity='sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8='
-        crossorigin='anonymous'></script>
+    <script src='https://code.jquery.com/jquery-3.3.1.min.js'
+        integrity='sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=' crossorigin='anonymous'></script>
 
     <!--------------------------------- FIREBASE -------------------------------->
     <script src="https://www.gstatic.com/firebasejs/5.5.5/firebase.js"></script>
     <script src="assets/javascript/googleSignIn.js"></script>
 
     <!--------------------------------- BOOTSTRAP -------------------------------->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
-        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
     <!--------------------------------- FAVICON -------------------------------->
     <link rel="shortcut icon" type="image/png" href="./assets/img/budzz_favicon.jpg">
@@ -31,76 +31,93 @@
     <!---------------------------- HEADER --------------------------->
 
     <header class="header">
-        <img src="assets/img/logo_transparent.png" width="150" height="150" frameborder="0" style="border:0"
-            allowfullscreen>
+        <img id="budzz-logo" src="assets/img/logo_transparent.png" frameborder="0" style="border:0" allowfullscreen>
 
         <div id="google-signin">
             <p> Signed in as:</p>
             <div id="google-details">
-
-                <div id="profile-img"></div>
                 <div id="current-user"></div>
+                <div id="profile-img"></div>
+
             </div>
         </div>
     </header>
+    <section id="content">
 
-    <!----------------------- Left Column - Drinks -------------------->
-    <div class="container" id="drinks-row">
-        <div class="row">
+        <!----------------------- Budzz Drinks -------------------->
+        <div class="container" id="drinks-row">
 
-            <div class="col-md-7" id="drinks-input">
-                <div>
-                    <h2><strong>Find Your Favorite Drink Here</strong></h2>
+            <div class="row">
+
+                <div class="col-md-12 drinks">
+                    <div id="favorite-drink-text">
+                        <h1><strong>Budzz</strong></h1>
+                        <hr>
+                        <p id="para1">Stuck in a social routine? Get out there and explore your neighborhood! The Budzz
+                            app
+                            will help you find new local bars and fun new drinks to try.</p>
+
+                        <p>Provide a type of alcohol or drink below (ex:
+                            Whiskey, Vodka, Margarita) and we'll provide fun drink options and where you can find them!
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+            <div class="row">
+
+                <div class="col-md-12 drinks">
+                    <div id="favorite-drink-text">
+                        <h1><strong>Search Drinks</strong></h1>
+                        <hr>
+
+                    </div>
+
+                    <form id="topic-form">
+                        <!------------------------- Input Box -------------------------->
+                        <input type="text" id="topic-input">
+                        <br>
+                        <!------------------------- Searching Drinks -------------------------->
+                        <input class="btn btn-info" id="add-topic" type="submit" value="Search Drinks">
+                    </form>
+                    <div class="error"></div>
+                </div>
+
+            </div>
+            <div class="row">
+
+
+                <!------------------------- Right Column - Drinks -------------------------->
+                <div class="col-md-12 drinks" id="drinks">
+                    <h1><strong>Drinks</strong></h1>
                     <hr>
-                    <p id="para1">Stuck in a social routine? Get out there and explore your neighborhood! The Budzz app
-                        will help you find new local bars and fun new drinks to try. Add new bars and drinks to your
-                        list and start crossing them off one by one!</p>
-                </div>
-
-                <br>
-                <form id="topic-form">
-                    <!------------------------- Input Box -------------------------->
-                    <input type="text" id="topic-input">
-                    <!------------------------- Searching Drinks -------------------------->
-                    <input class="btn btn-info" id="add-topic" type="submit" value="Search Drinks">
-                </form>
-                <div class="error">
+                    <div id="drink-list"></div>
 
                 </div>
-            </div>
-
-            <div class="col-md-1"></div>
-
-            <!------------------------- Right Column - Drinks -------------------------->
-            <div class="col-md-4" id="drinks">
-                <h2 id="drinks-header"><strong>DRINKS:</strong></h2>
-                <hr>
-                <div id="drink-list"></div>
 
             </div>
-
 
 
         </div>
-    </div>
 
-    <!------------------------- Google Maps -------------------------->
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <div id="map"></div>
-                <div id="places"></div>
-                <div id="demo"></div>
+        <!------------------------- Google Maps -------------------------->
+        <div class="container">
+            <div class="row" id="goog-maps">
+                <div class="col-md-12">
+                    <div id="map"></div>
+                    <div id="places"></div>
+                    <div id="demo"></div>
+                </div>
             </div>
         </div>
-    </div>
-
+    </section>
     <!------------------------- Footer -------------------------->
     <footer>&copy; Copyright Budzz 2018 </footer>
 
     <!------------------------- Script Tags -------------------------->
     <script src="assets/javascript/drinksAPI.js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBxMi-JFZ7rEdxN-SIT-94Z69OpS6PpSOw&libraries=places&callback=initMap"
+    <script
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBxMi-JFZ7rEdxN-SIT-94Z69OpS6PpSOw&libraries=places&callback=initMap"
         async defer></script>
     <script src="assets/javascript/googleMapsAPI.js"></script>
 </body>
